@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --font-size:0.8rem;
+}
+body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 3vh 10vw 3vh 10vw;
+}
+.navbar{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content:space-between;
+    box-sizing: border-box;
+    height: 5vh;
+    list-style:none;
+    text-align: center;
+}
+.menu{
+     display: flex;
+    justify-content:space-between;
+    box-sizing: border-box;
+    height: 5vh;
+    list-style:none;
+    text-align: center;
+}
+.menu>li>a:hover{
+    color: black;
+}
+.menu>li>a{
+    display: flex;
+    gap: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: gray;
+    margin-left: 2vh;
+}
+.logo{
+    float: left;
+}
+.ham{
+    display: flex;
+    gap: 10px;
+}
+.hambutton{
+    display: none;
+    border: none;
+    cursor: pointer;
+}
+.hamicon{
+    height: 100%;
+}
+.hammenu{
+    box-sizing: border-box;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    visibility: hidden;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: 20px;
+}
+.hammenu >a{
+    text-decoration: none;
+    text-align: left;
+    color: white;
+}
+.username{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    background-color:lightskyblue;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    float: right; 
+    border: none; 
+}
+.hero{
+    margin-top: 15vh;
+}
+.image{
+    width: 250px;
+}
+.left{
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 2vh 2vw;
+    float: left;
+    width: 45%;
+}
+.button{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 2vh;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius:10px;
+    background-color: rgb(7, 158, 245);
+    padding: 1.5vh 3vw 1.5vh 3vw;
+}
+.button:hover{
+    background-color: aqua;
+    color: blue;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:1024px){
+    .menu>li>a{
+        font-size: var(--font-size);
+    }
+    .logo{
+        font-size:var(--font-size);
+    }
+    .username{
+        padding: 5px;
+        font-size: var(--font-size);
+    }
+    .left{
+        font-size: var(--font-size);
+    }
+    .image{
+        width: 200px;
+    }
+}
+@media(max-width:480px){
+    .menu>li>a{
+        visibility: hidden;
+    }
+    .left{
+        width: 100%;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .image{
+        width: 350px;
+    }
+    .hambutton{
+        display: block;
+    }
+    .hambutton:focus +.hammenu{
+        visibility: visible;
+    }
+}
